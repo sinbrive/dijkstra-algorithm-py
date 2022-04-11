@@ -12,5 +12,5 @@
 
 - Best links
    - https://youtu.be/CL1byLngb5Q
-       - ![image](https://user-images.githubusercontent.com/21102151/162713726-8cf437b4-0343-498d-83cd-9e32f300d8f9.png)
-       - ![image](https://user-images.githubusercontent.com/21102151/162713918-b08a9f28-6c26-4f89-adc7-c06cfc5be952.png)
+       - ![image](https://user-images.githubusercontent.com/21102151/162725210-c7ba28a9-319b-484c-828e-fdcc37a3c318.png)
+       - ![image](https://user-images.githubusercontent.com/21102151/162725301-d50d9565-e706-4530-8e73-d66e7be9d4dd.png)
