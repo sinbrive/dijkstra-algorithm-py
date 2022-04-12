@@ -1,7 +1,7 @@
 # dijkstra-algorithm
 
 - voir fichier excel
-![image](https://user-images.githubusercontent.com/21102151/163030662-3b0265c7-209d-443b-ba9b-780ce0f66c4a.png)
+![image](animation.gif)
 
 
 ### standard method (better)
