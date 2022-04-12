@@ -3,12 +3,12 @@
 - voir fichier excel
 
 
-### standard method 2 (better)
+### standard method (better)
    - ![image](https://user-images.githubusercontent.com/21102151/163026415-ac5a6173-6bed-47d3-95eb-131cefbd5f70.png)
    - source : https://youtu.be/5GT5hYzjNoo
    - ![image](https://user-images.githubusercontent.com/21102151/163024147-fb29e96e-572d-40fe-8382-dbb829409e2a.png)
 
-### Standard method : take each node from the start to the end
+### Standard method 2: take each node from the start to the end
    - ![image](https://user-images.githubusercontent.com/21102151/162724380-ec759817-e547-4c6a-9127-52fc459f4a88.png)
 
 ### My firdt method
