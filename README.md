@@ -1,6 +1,8 @@
 # dijkstra-algorithm
 
 - voir fichier excel
+
+- animation : https://github.com/AlgorithmsMeetup/Pathfinding
 ![image](animation.gif)
 
 
