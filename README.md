@@ -1,12 +1,17 @@
 # dijkstra-algorithm
 
-- voir fichier excel
+<img src="https://user-images.githubusercontent.com/21102151/163158612-1d5fb346-d5c4-4576-bed1-740f1afc0e48.png" width=70% height=70%>
+
+
+### Intro
 
 - animation : https://github.com/AlgorithmsMeetup/Pathfinding
+
 ![image](animation.gif)
 
 
 ### standard method (better)
+   - check fichier excel file
    - ![image](https://user-images.githubusercontent.com/21102151/163026415-ac5a6173-6bed-47d3-95eb-131cefbd5f70.png)
    - source : https://youtu.be/5GT5hYzjNoo
    - ![image](https://user-images.githubusercontent.com/21102151/163024147-fb29e96e-572d-40fe-8382-dbb829409e2a.png)
