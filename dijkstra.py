@@ -35,7 +35,7 @@ def dijkstra(graph,start,goal):
     # go through unvisited nodes
     while unVisited:
         focusNode = None
-        # select focus node (best node to analyse)
+        # select focus node (that with the shortest distance)
         for node in unVisited:
             if focusNode is None:
                 focusNode = node
