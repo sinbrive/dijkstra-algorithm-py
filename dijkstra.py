@@ -1,4 +1,6 @@
 
+# inspired from https://youtu.be/IG1QioWSXRI
+
 # directed weighted graph
 graph = {'a':{'b':10,'c':3},
          'b':{'c':1,'d':2},
