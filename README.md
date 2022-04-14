@@ -36,3 +36,6 @@
        - ![image](https://user-images.githubusercontent.com/21102151/162725210-c7ba28a9-319b-484c-828e-fdcc37a3c318.png)
        - ![image](https://user-images.githubusercontent.com/21102151/162725301-d50d9565-e706-4530-8e73-d66e7be9d4dd.png)
    - `implementation in many languages` : https://github.com/mburst/dijkstras-algorithm
+   - other example
+   ![image](https://user-images.githubusercontent.com/21102151/163464172-dbb053c1-cb75-4594-a299-d6cf6b15898d.png)
+
