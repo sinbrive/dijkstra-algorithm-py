@@ -13,29 +13,33 @@ list2 = [[graph[node][s] for s in graph[node] ] for node in graph ]
 print( list2)
 '''
 
+# get shorted distances and predecessors vs. start node 
 def dijkstra(G, start):
   
   unVisited = [node for node in G]
   distances = {}
   predecessors={}
   infinity = 999999
-  
+
+  # init distances : 0 for start node and inifnite for other
   for node in unVisited:
     if node == start:
       distances[node] = 0
     else:
       distances[node] = infinity
-  
+      
+  # go through unvisited nodes
   while unVisited:  
-    # node with min distance search (focusNode)
+    # node with min distance search (->focusNode)
     m = infinity
     focusNode = None
     for n, w in distances.items():
       if n not in unVisited: continue
       if w <= m:
         m = w
-        focusNode = n    
-    
+        focusNode = n   
+        
+    # remove this focusNode
     unVisited.remove(focusNode)
     
     # update distance with the focusNode neighbors 
@@ -47,6 +51,7 @@ def dijkstra(G, start):
           
   return distances, predecessors
 
+# get shortest path
 def shortestPath(G, start, end):
   dist, pred = dijkstra(G, start)
   current=end
