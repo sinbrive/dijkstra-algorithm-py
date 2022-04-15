@@ -1,16 +1,66 @@
 
-# inspired from https://youtu.be/IG1QioWSXRI
 
-# directed weighted graph
-graph = {'a':{'b':10,'c':3},
-         'b':{'c':1,'d':2},
-         'c':{'b':4,'d':8,'e':2},
-         'd':{'e':7},
-         'e':{'d':9}
-        }
+'''
+max = 0
+for node in graph:
+  for i in graph[node].items():
+    max = max + i[1]
+max += 1
+print(max)
 
-# undirected weighted graph (SNT example)
-graph2 = {'a':{'b':8,'c':6.5, 'i':6.7, 'f':7},
+list=[node for node in graph]
+list2 = [[graph[node][s] for s in graph[node] ] for node in graph ]
+print( list2)
+'''
+
+def dijkstra(G, start):
+  
+  unVisited = [node for node in G]
+  distances = {}
+  predecessors={}
+  infinity = 999999
+  
+  for node in unVisited:
+    if node == start:
+      distances[node] = 0
+    else:
+      distances[node] = infinity
+  
+  while unVisited:  
+    # node with min distance search (focusNode)
+    m = infinity
+    focusNode = None
+    for n, w in distances.items():
+      if n not in unVisited: continue
+      if w <= m:
+        m = w
+        focusNode = n    
+    
+    unVisited.remove(focusNode)
+    
+    # update distance with the focusNode neighbors 
+    for n, w in graph[focusNode].items():
+        new_dist = distances[focusNode] + w
+        if new_dist < distances[n]:
+          distances[n]= new_dist
+          predecessors[n]=focusNode
+          
+  return distances, predecessors
+
+def shortestPath(G, start, end):
+  dist, pred = dijkstra(G, start)
+  current=end
+  path=[]
+  while True:
+    path.insert(0, current)
+    current = pred[current]
+    if current == start:
+      path.insert(0, current)
+      break
+  return path
+  
+
+graph = {'a':{'b':8,'c':6.5, 'i':6.7, 'f':7},
          'b':{'c':6.5, 'a':8},
          'c':{'d':4, 'b':6.5},
          'd':{'e':6, 'i':4},
@@ -22,50 +72,8 @@ graph2 = {'a':{'b':8,'c':6.5, 'i':6.7, 'f':7},
          'j':{'h':10, 'e':10}
         }
 
-def dijkstra(graph,start,goal):
-    shortest_distance = {}
-    predecessor = {}
-    unVisited = graph
-    infinity = 9999999
-    path = []
-  
-    # initialisation : 0 for start and infinity for other
-    for node in unVisited:
-        shortest_distance[node] = infinity
-    shortest_distance[start] = 0
+path = shortestPath(graph, 'a', 'j')
 
-    # go through unvisited nodes
-    while unVisited:
-        focusNode = None
-        # select focus node (that with the shortest distance)
-        for node in unVisited:
-            if focusNode is None:
-                focusNode = node
-            elif shortest_distance[node] < shortest_distance[focusNode]:
-                focusNode = node
-        # for this focus node, check each children weight (= distance(focus, child))
-        for childNode, weight in graph[focusNode].items():
-            if weight + shortest_distance[focusNode] < shortest_distance[childNode]:
-                shortest_distance[childNode] = weight + shortest_distance[focusNode]
-                predecessor[childNode] = focusNode
-        # don't come back anymore to this focusNode
-        unVisited.pop(focusNode)
+print(path)
+
       
-    print('distance from start:'+str(shortest_distance), '\n')
-    print('predecessors:'+str(predecessor), '\n')
-
-    currentNode = goal
-    while currentNode != start:
-        try:
-            path.insert(0,currentNode)
-            currentNode = predecessor[currentNode]
-        except KeyError:
-            print('Path not reachable')
-            break
-    path.insert(0,start)
-    if shortest_distance[goal] != infinity:
-        print('Shortest distance is ' + str(shortest_distance[goal]), '\n')
-        print('The path is ' + str(path))
-
-
-dijkstra(graph2, 'a', 'j')
