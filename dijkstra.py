@@ -109,7 +109,6 @@ g.addEdge('j', 'e', 10)
 g.addEdge('j', 'h', 10)
 
 graph = g.getGraph()
-
 path = shortestPath(graph, 'a', 'j')
 
 print(path)
