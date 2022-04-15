@@ -2,8 +2,6 @@
 
 <img src="https://user-images.githubusercontent.com/21102151/163158612-1d5fb346-d5c4-4576-bed1-740f1afc0e48.png" width=70% height=70%>
 
-
-
 ### Intro
 
 - animation : https://github.com/AlgorithmsMeetup/Pathfinding
@@ -30,6 +28,20 @@
   - ![image](https://user-images.githubusercontent.com/21102151/162714175-5406c274-6c7d-43f5-b201-6866f416092f.png)
   - ![image](https://user-images.githubusercontent.com/21102151/162715506-94150126-ac58-4f5e-b55d-1b6184e7c3e3.png)
   - ![image](https://user-images.githubusercontent.com/21102151/162716027-d7affec9-97ae-418d-8c8c-6ade494a2d65.png)
+
+### Code
+```python
+max = 0
+for node in graph:
+  for i in graph[node].items():
+    max = max + i[1]
+max += 1
+print(max)
+
+list=[node for node in graph]
+list2 = [[graph[node][s] for s in graph[node] ] for node in graph ]
+print( list2)
+```
 
 ### Best links
    - https://youtu.be/CL1byLngb5Q

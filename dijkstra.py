@@ -1,18 +1,7 @@
-
-
 '''
-max = 0
-for node in graph:
-  for i in graph[node].items():
-    max = max + i[1]
-max += 1
-print(max)
-
-list=[node for node in graph]
-list2 = [[graph[node][s] for s in graph[node] ] for node in graph ]
-print( list2)
+  dijkstra algo
+  sinbrive 2022/04
 '''
-
 # get shortest distances and predecessors vs. start node 
 def dijkstra(G, start):
   
