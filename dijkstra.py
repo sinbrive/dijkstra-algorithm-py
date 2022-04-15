@@ -3,24 +3,7 @@
   sinbrive 2022/04
 '''
 
-class Graph:
-  def __init__(self):
-    self.vertices={}
-
-  def addVertex(self,*vert):
-    for v in vert:
-      self.vertices[v]={}
-
-  def addEdge(self, v1, v2, n):
-    self.vertices[v1].update({v2:n})
-
-  def printv(self):
-    #for v in self.vertices.items():
-    print()
-    print(self.vertices)
-
- 
-
+from graph import Graph
 
 # get shortest distances and predecessors vs. start node 
 def dijkstra(G, start):
@@ -125,9 +108,8 @@ g.addEdge('i', 'h', 7)
 g.addEdge('j', 'e', 10)
 g.addEdge('j', 'h', 10)
 
-#g.printv()
-      
-#path = shortestPath(graph, 'a', 'j')
-path = shortestPath(g.vertices, 'a', 'j')
+graph = g.getGraph()
+
+path = shortestPath(graph, 'a', 'j')
 
 print(path)
