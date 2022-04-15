@@ -13,7 +13,7 @@ list2 = [[graph[node][s] for s in graph[node] ] for node in graph ]
 print( list2)
 '''
 
-# get shorted distances and predecessors vs. start node 
+# get shortest distances and predecessors vs. start node 
 def dijkstra(G, start):
   
   unVisited = [node for node in G]
