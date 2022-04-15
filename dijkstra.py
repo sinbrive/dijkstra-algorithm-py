@@ -5,57 +5,6 @@
 
 from graph import Graph
 
-# get shortest distances and predecessors vs. start node 
-def dijkstra(G, start):
-
-  unVisited = [node for node in G]
-  distances = {}
-  predecessors={}
-  infinity = 999999
-
-  # init distances : 0 for start node and inifnite for other
-  for node in unVisited:
-    if node == start:
-      distances[node] = 0
-    else:
-      distances[node] = infinity
-      
-  # go through unvisited nodes
-  while unVisited:  
-    # node with min distance search (->focusNode)
-    m = infinity
-    focusNode = None
-    for n, w in distances.items():
-      if n not in unVisited: continue
-      if w <= m:
-        m = w
-        focusNode = n   
-        
-    # remove this focusNode
-    unVisited.remove(focusNode)
-    
-    # update distance with the focusNode neighbors 
-    for n, w in graph[focusNode].items():
-        new_dist = distances[focusNode] + w
-        if new_dist < distances[n]:
-          distances[n]= new_dist
-          predecessors[n]=focusNode
-          
-  return distances, predecessors
-
-# get shortest path
-def shortestPath(G, start, end):
-  dist, pred = dijkstra(G, start)
-  current=end
-  path=[]
-  while True:
-    path.insert(0, current)
-    current = pred[current]
-    if current == start:
-      path.insert(0, current)
-      break
-  return path
-  
 
 graph = {'a':{'b':8,'c':6.5, 'i':6.7, 'f':7},
          'b':{'c':6.5, 'a':8},
@@ -69,7 +18,14 @@ graph = {'a':{'b':8,'c':6.5, 'i':6.7, 'f':7},
          'j':{'h':10, 'e':10}
         }
 
+# us_ing ready graph
+g = Graph(graph)
 
+path = g.shortestPath('a', 'j')
+
+print('with ready graph: ',path)
+
+# using constructed graph
 g = Graph()
 
 g.addVertex('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j')
@@ -108,7 +64,8 @@ g.addEdge('i', 'h', 7)
 g.addEdge('j', 'e', 10)
 g.addEdge('j', 'h', 10)
 
-graph2 = g.getGraph()
-path = shortestPath(graph2, 'a', 'j')
 
-print(path)
+path = g.shortestPath('a', 'j')
+
+print('with made graph:', path)
+
