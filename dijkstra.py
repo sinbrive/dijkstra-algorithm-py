@@ -2,9 +2,29 @@
   dijkstra algo
   sinbrive 2022/04
 '''
+
+class Graph:
+  def __init__(self):
+    self.vertices={}
+
+  def addVertex(self,*vert):
+    for v in vert:
+      self.vertices[v]={}
+
+  def addEdge(self, v1, v2, n):
+    self.vertices[v1].update({v2:n})
+
+  def printv(self):
+    #for v in self.vertices.items():
+    print()
+    print(self.vertices)
+
+ 
+
+
 # get shortest distances and predecessors vs. start node 
 def dijkstra(G, start):
-  
+
   unVisited = [node for node in G]
   distances = {}
   predecessors={}
@@ -66,8 +86,48 @@ graph = {'a':{'b':8,'c':6.5, 'i':6.7, 'f':7},
          'j':{'h':10, 'e':10}
         }
 
-path = shortestPath(graph, 'a', 'j')
+
+g = Graph()
+
+g.addVertex('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j')
+g.addEdge('a', 'b', 8)
+g.addEdge('a', 'c', 6.5)
+g.addEdge('a', 'f', 7)
+g.addEdge('a', 'i', 6.7)
+
+g.addEdge('b', 'a', 8)
+g.addEdge('b', 'c', 6.5)
+
+g.addEdge('c', 'b', 6.5)
+g.addEdge('c', 'd', 4)
+
+g.addEdge('d', 'c', 4)
+g.addEdge('d', 'e', 6)
+
+g.addEdge('e', 'd', 6)
+g.addEdge('e', 'j', 10)
+
+g.addEdge('f', 'a', 7)
+g.addEdge('f', 'g', 2.5)
+
+g.addEdge('g', 'f', 2.5)
+g.addEdge('g', 'i', 5.5)
+
+g.addEdge('h', 'g', 4.5)
+g.addEdge('h', 'i', 7)
+g.addEdge('h', 'j', 10)
+
+g.addEdge('i', 'a', 6.7)
+g.addEdge('i', 'd', 4)
+g.addEdge('i', 'g', 5.5)
+g.addEdge('i', 'h', 7)
+
+g.addEdge('j', 'e', 10)
+g.addEdge('j', 'h', 10)
+
+#g.printv()
+      
+#path = shortestPath(graph, 'a', 'j')
+path = shortestPath(g.vertices, 'a', 'j')
 
 print(path)
-
-      
