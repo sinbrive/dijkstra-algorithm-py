@@ -1,11 +1,10 @@
 # dijkstra-algorithm
 
 
-- example
+## Intro
 
 ![image](https://user-images.githubusercontent.com/21102151/163220841-9ea1a414-e9db-4eb1-829d-651e4eb108b0.png)
 ![image](https://user-images.githubusercontent.com/21102151/163221530-db2896af-0014-4d25-94e2-daf8aeca3767.png)
-
 
 ### algorithm (e.g. graph implmented as use case)
    - ![image](https://user-images.githubusercontent.com/21102151/163026415-ac5a6173-6bed-47d3-95eb-131cefbd5f70.png)
