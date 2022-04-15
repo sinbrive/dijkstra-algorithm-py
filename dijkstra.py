@@ -108,7 +108,7 @@ g.addEdge('i', 'h', 7)
 g.addEdge('j', 'e', 10)
 g.addEdge('j', 'h', 10)
 
-graph = g.getGraph()
-path = shortestPath(graph, 'a', 'j')
+graph2 = g.getGraph()
+path = shortestPath(graph2, 'a', 'j')
 
 print(path)
