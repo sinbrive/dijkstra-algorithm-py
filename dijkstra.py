@@ -21,9 +21,9 @@ graph = {'a':{'b':8,'c':6.5, 'i':6.7, 'f':7},
 # using given graph
 g = Graph(graph)
 
-path = g.shortestPath('a', 'j')
+distance, path = g.shortestPath('a', 'j')
 
-print('with ready graph: ',path)
+print('with ready graph: ', distance, path)
 
 # using constructed graph
 g = Graph()
@@ -65,7 +65,7 @@ g.addEdge('j', 'e', 10)
 g.addEdge('j', 'h', 10)
 
 
-path = g.shortestPath('a', 'j')
+distance, path = g.shortestPath('a', 'j')
 
-print('with made graph:', path)
+print('with made graph:', distance, path)
 

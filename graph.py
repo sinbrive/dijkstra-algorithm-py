@@ -16,7 +16,6 @@ class Graph:
     print(self.vertices)
 
   def dijkstra(self, start):
-  
     unVisited = [node for node in self.vertices]
     distances = {}
     predecessors = {}
@@ -62,6 +61,7 @@ class Graph:
       if current == start:
         path.insert(0, current)
         break
-    return path
+    
+    return dist[end], path
   
  
