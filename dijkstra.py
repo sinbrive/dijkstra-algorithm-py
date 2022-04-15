@@ -18,7 +18,7 @@ graph = {'a':{'b':8,'c':6.5, 'i':6.7, 'f':7},
          'j':{'h':10, 'e':10}
         }
 
-# us_ing ready graph
+# using given graph
 g = Graph(graph)
 
 path = g.shortestPath('a', 'j')
