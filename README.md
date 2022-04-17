@@ -1,5 +1,11 @@
-# dijkstra-algorithm
+# dijkstra-algorithm-py
 
+
+## JS version 
+- https://github.com/sinbrive/dijkstra-algorithm-js
+
+## Cpp version 
+- https://github.com/sinbrive/dijkstra-algorithm-cpp
 
 ### Intro
 
