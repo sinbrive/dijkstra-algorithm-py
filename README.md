@@ -20,4 +20,4 @@
 ### links
    - https://youtu.be/CL1byLngb5Q
    - `implementation in many languages` : https://github.com/mburst/dijkstras-algorithm
-
+   - http://maxburstein.com/blog/introduction-to-graph-theory-finding-shortest-path
