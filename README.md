@@ -1,5 +1,6 @@
 # dijkstra-algorithm-py
 
+[![Run on Repl.it](https://repl.it/badge/github/sinbrive/dijkstra-algorithm-py)](https://repl.it/github/sinbrive/dijkstra-algorithm-py)
 
 ## JS version 
 - https://github.com/sinbrive/dijkstra-algorithm-js
